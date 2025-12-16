@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine Insurance Application</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        .insurance-type {
+            background-color: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 24px;
+            margin-bottom: 32px;
+        }
+
+        .insurance-type h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 14px;
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            background-color: white;
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #333;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px dashed #d0d0d0;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        button {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 12px 32px;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 32px 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Marine Insurance Application</h1>
+        <p class="subtitle">Complete the form below to apply for marine insurance coverage</p>
+
+        <form>
+            <!-- Cargo Insurance -->
+            <div class="insurance-type">
+                <h2>Cargo Insurance</h2>
+
+                <div class="form-group">
+                    <label for="cargo-company">Company Name</label>
+                    <input type="text" id="cargo-company" placeholder="Enter company name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cargo-reg">Company Registration Number</label>
+                        <input type="text" id="cargo-reg" placeholder="Enter registration number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cargo-contact">Contact Person Name</label>
+                        <input type="text" id="cargo-contact" placeholder="Enter contact name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cargo-phone">Phone Number</label>
+                        <input type="tel" id="cargo-phone" placeholder="Enter phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cargo-email">Email Address</label>
+                        <input type="email" id="cargo-email" placeholder="Enter email address">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cargo-type">Cargo Type</label>
+                        <input type="text" id="cargo-type" placeholder="e.g., Electronics, Machinery">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cargo-value">Cargo Value</label>
+                        <input type="number" id="cargo-value" placeholder="Enter cargo value">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cargo-origin">Origin Port</label>
+                        <input type="text" id="cargo-origin" placeholder="Enter origin port">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cargo-destination">Destination Port</label>
+                        <input type="text" id="cargo-destination" placeholder="Enter destination port">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cargo-date">Shipping Date</label>
+                        <input type="date" id="cargo-date">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cargo-vessel">Vessel Name</label>
+                        <input type="text" id="cargo-vessel" placeholder="Enter vessel name">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="cargo-invoice">Invoice (Image)</label>
+                    <input type="file" id="cargo-invoice" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="cargo-packing">Packing List (Image)</label>
+                    <input type="file" id="cargo-packing" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="cargo-bill">Bill of Lading (Image)</label>
+                    <input type="file" id="cargo-bill" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="cargo-license">Trade License (Image)</label>
+                    <input type="file" id="cargo-license" accept="image/*">
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Hull and Machinery Insurance -->
+            <div class="insurance-type">
+                <h2>Hull and Machinery Insurance</h2>
+
+                <div class="form-group">
+                    <label for="hull-owner">Owner/Company Name</label>
+                    <input type="text" id="hull-owner" placeholder="Enter owner or company name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="hull-reg">Company Registration Number</label>
+                        <input type="text" id="hull-reg" placeholder="Enter registration number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hull-contact">Contact Person Name</label>
+                        <input type="text" id="hull-contact" placeholder="Enter contact name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="hull-phone">Phone Number</label>
+                        <input type="tel" id="hull-phone" placeholder="Enter phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hull-email">Email Address</label>
+                        <input type="email" id="hull-email" placeholder="Enter email address">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="hull-vessel">Vessel Name</label>
+                        <input type="text" id="hull-vessel" placeholder="Enter vessel name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hull-type">Vessel Type</label>
+                        <select id="hull-type">
+                            <option value="">Select type</option>
+                            <option value="cargo">Cargo Ship</option>
+                            <option value="tanker">Tanker</option>
+                            <option value="fishing">Fishing Vessel</option>
+                            <option value="passenger">Passenger Ship</option>
+                            <option value="yacht">Yacht</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="hull-year">Year Built</label>
+                        <input type="number" id="hull-year" placeholder="2020">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hull-value">Vessel Value</label>
+                        <input type="number" id="hull-value" placeholder="Enter vessel value">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="hull-engine">Engine Details</label>
+                    <textarea id="hull-engine" placeholder="Enter engine specifications and details..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="hull-purpose">Usage Purpose</label>
+                    <input type="text" id="hull-purpose" placeholder="e.g., Commercial cargo transport">
+                </div>
+
+                <div class="form-group">
+                    <label for="hull-registration">Vessel Registration (Image)</label>
+                    <input type="file" id="hull-registration" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="hull-survey">Vessel Survey Report (Image)</label>
+                    <input type="file" id="hull-survey" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="hull-photos">Vessel Photos (Multiple Images)</label>
+                    <input type="file" id="hull-photos" accept="image/*" multiple>
+                </div>
+
+                <div class="form-group">
+                    <label for="hull-ownership">Ownership Document (Image)</label>
+                    <input type="file" id="hull-ownership" accept="image/*">
+                </div>
+            </div>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>

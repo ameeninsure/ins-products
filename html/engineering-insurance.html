@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Insurance Application</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        .insurance-type {
+            background-color: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 24px;
+            margin-bottom: 32px;
+        }
+
+        .insurance-type h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 14px;
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            background-color: white;
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #333;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px dashed #d0d0d0;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        button {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 12px 32px;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 32px 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Engineering Insurance Application</h1>
+        <p class="subtitle">Complete the form below to apply for engineering insurance coverage</p>
+
+        <form>
+            <!-- Contractors All Risks Insurance -->
+            <div class="insurance-type">
+                <h2>Contractors All Risks Insurance</h2>
+
+                <div class="form-group">
+                    <label for="car-company">Company Name</label>
+                    <input type="text" id="car-company" placeholder="Enter company name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="car-reg">Company Registration Number</label>
+                        <input type="text" id="car-reg" placeholder="Enter registration number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="car-contact">Contact Person Name</label>
+                        <input type="text" id="car-contact" placeholder="Enter contact name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="car-phone">Phone Number</label>
+                        <input type="tel" id="car-phone" placeholder="Enter phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="car-email">Email Address</label>
+                        <input type="email" id="car-email" placeholder="Enter email address">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="car-project">Project Name</label>
+                    <input type="text" id="car-project" placeholder="Enter project name">
+                </div>
+
+                <div class="form-group">
+                    <label for="car-location">Project Location</label>
+                    <input type="text" id="car-location" placeholder="Enter project location">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="car-value">Project Value</label>
+                        <input type="number" id="car-value" placeholder="Enter project value">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="car-contract">Contract Value</label>
+                        <input type="number" id="car-contract" placeholder="Enter contract value">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="car-start">Project Start Date</label>
+                        <input type="date" id="car-start">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="car-duration">Project Duration (months)</label>
+                        <input type="number" id="car-duration" placeholder="12">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="car-type">Project Type</label>
+                    <select id="car-type">
+                        <option value="">Select type</option>
+                        <option value="building">Building Construction</option>
+                        <option value="civil">Civil Works</option>
+                        <option value="infrastructure">Infrastructure</option>
+                        <option value="industrial">Industrial</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="car-agreement">Contract Agreement (Image)</label>
+                    <input type="file" id="car-agreement" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="car-plans">Project Plans (Images)</label>
+                    <input type="file" id="car-plans" accept="image/*" multiple>
+                </div>
+
+                <div class="form-group">
+                    <label for="car-license">Trade License (Image)</label>
+                    <input type="file" id="car-license" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="car-reg-img">Company Registration (Image)</label>
+                    <input type="file" id="car-reg-img" accept="image/*">
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Machinery Breakdown Insurance -->
+            <div class="insurance-type">
+                <h2>Machinery Breakdown Insurance</h2>
+
+                <div class="form-group">
+                    <label for="mach-company">Company Name</label>
+                    <input type="text" id="mach-company" placeholder="Enter company name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="mach-reg">Company Registration Number</label>
+                        <input type="text" id="mach-reg" placeholder="Enter registration number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mach-contact">Contact Person Name</label>
+                        <input type="text" id="mach-contact" placeholder="Enter contact name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="mach-phone">Phone Number</label>
+                        <input type="tel" id="mach-phone" placeholder="Enter phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mach-email">Email Address</label>
+                        <input type="email" id="mach-email" placeholder="Enter email address">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mach-type">Machinery Type</label>
+                    <input type="text" id="mach-type" placeholder="e.g., CNC Machine, Industrial Press">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="mach-make">Machinery Make and Model</label>
+                        <input type="text" id="mach-make" placeholder="Enter make and model">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mach-year">Year of Manufacturing</label>
+                        <input type="number" id="mach-year" placeholder="2020">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="mach-value">Machinery Value</label>
+                        <input type="number" id="mach-value" placeholder="Enter machinery value">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mach-location">Installation Location</label>
+                        <input type="text" id="mach-location" placeholder="Enter location">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mach-purpose">Usage Purpose</label>
+                    <textarea id="mach-purpose" placeholder="Describe the machinery usage and purpose..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="mach-invoice">Machinery Invoice (Image)</label>
+                    <input type="file" id="mach-invoice" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="mach-photos">Machinery Photos (Multiple Images)</label>
+                    <input type="file" id="mach-photos" accept="image/*" multiple>
+                </div>
+
+                <div class="form-group">
+                    <label for="mach-maintenance">Maintenance Records (Image)</label>
+                    <input type="file" id="mach-maintenance" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="mach-license">Trade License (Image)</label>
+                    <input type="file" id="mach-license" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="mach-reg-img">Company Registration (Image)</label>
+                    <input type="file" id="mach-reg-img" accept="image/*">
+                </div>
+            </div>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>

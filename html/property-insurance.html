@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Insurance Application</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        .insurance-type {
+            background-color: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 24px;
+            margin-bottom: 32px;
+        }
+
+        .insurance-type h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 14px;
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            background-color: white;
+            transition: border-color 0.2s;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #333;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px dashed #d0d0d0;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        button {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 12px 32px;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 32px 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Property Insurance Application</h1>
+        <p class="subtitle">Complete the form below to apply for property insurance coverage</p>
+
+        <form>
+            <!-- Commercial Property Insurance -->
+            <div class="insurance-type">
+                <h2>Commercial Property Insurance</h2>
+
+                <div class="form-group">
+                    <label for="comm-company">Company Name</label>
+                    <input type="text" id="comm-company" placeholder="Enter company name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="comm-reg">Company Registration Number</label>
+                        <input type="text" id="comm-reg" placeholder="Enter registration number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comm-contact">Contact Person Name</label>
+                        <input type="text" id="comm-contact" placeholder="Enter contact name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="comm-phone">Phone Number</label>
+                        <input type="tel" id="comm-phone" placeholder="Enter phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comm-email">Email Address</label>
+                        <input type="email" id="comm-email" placeholder="Enter email address">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="comm-address">Property Address</label>
+                    <input type="text" id="comm-address" placeholder="Enter property address">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="comm-type">Property Type</label>
+                        <select id="comm-type">
+                            <option value="">Select type</option>
+                            <option value="office">Office</option>
+                            <option value="retail">Retail</option>
+                            <option value="warehouse">Warehouse</option>
+                            <option value="mixed">Mixed Use</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comm-area">Building Area (sq meters)</label>
+                        <input type="number" id="comm-area" placeholder="Enter area">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="comm-value">Property Value</label>
+                        <input type="number" id="comm-value" placeholder="Enter property value">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comm-business">Business Type</label>
+                        <input type="text" id="comm-business" placeholder="Enter business type">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="comm-ownership">Property Ownership Document (Image)</label>
+                    <input type="file" id="comm-ownership" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="comm-photos">Property Photos (Multiple Images)</label>
+                    <input type="file" id="comm-photos" accept="image/*" multiple>
+                </div>
+
+                <div class="form-group">
+                    <label for="comm-license">Trade License (Image)</label>
+                    <input type="file" id="comm-license" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="comm-reg-img">Company Registration (Image)</label>
+                    <input type="file" id="comm-reg-img" accept="image/*">
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Industrial Property Insurance -->
+            <div class="insurance-type">
+                <h2>Industrial Property Insurance</h2>
+
+                <div class="form-group">
+                    <label for="ind-company">Company Name</label>
+                    <input type="text" id="ind-company" placeholder="Enter company name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ind-reg">Company Registration Number</label>
+                        <input type="text" id="ind-reg" placeholder="Enter registration number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ind-contact">Contact Person Name</label>
+                        <input type="text" id="ind-contact" placeholder="Enter contact name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ind-phone">Phone Number</label>
+                        <input type="tel" id="ind-phone" placeholder="Enter phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ind-email">Email Address</label>
+                        <input type="email" id="ind-email" placeholder="Enter email address">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="ind-address">Facility Address</label>
+                    <input type="text" id="ind-address" placeholder="Enter facility address">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ind-type">Facility Type</label>
+                        <select id="ind-type">
+                            <option value="">Select type</option>
+                            <option value="factory">Factory</option>
+                            <option value="plant">Plant</option>
+                            <option value="warehouse">Warehouse</option>
+                            <option value="workshop">Workshop</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ind-area">Building Area (sq meters)</label>
+                        <input type="number" id="ind-area" placeholder="Enter area">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ind-equipment">Equipment Value</label>
+                        <input type="number" id="ind-equipment" placeholder="Enter equipment value">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ind-total">Total Property Value</label>
+                        <input type="number" id="ind-total" placeholder="Enter total value">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="ind-industry">Industry Type</label>
+                    <input type="text" id="ind-industry" placeholder="e.g., Manufacturing, Processing">
+                </div>
+
+                <div class="form-group">
+                    <label for="ind-safety">Safety Certificates (Image)</label>
+                    <input type="file" id="ind-safety" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="ind-ownership">Property Ownership Document (Image)</label>
+                    <input type="file" id="ind-ownership" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="ind-photos">Facility Photos (Multiple Images)</label>
+                    <input type="file" id="ind-photos" accept="image/*" multiple>
+                </div>
+
+                <div class="form-group">
+                    <label for="ind-license">Trade License (Image)</label>
+                    <input type="file" id="ind-license" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="ind-reg-img">Company Registration (Image)</label>
+                    <input type="file" id="ind-reg-img" accept="image/*">
+                </div>
+            </div>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>

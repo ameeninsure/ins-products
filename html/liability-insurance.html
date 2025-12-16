@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liability Insurance Application</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        .insurance-type {
+            background-color: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 24px;
+            margin-bottom: 32px;
+        }
+
+        .insurance-type h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 14px;
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            background-color: white;
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #333;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px dashed #d0d0d0;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        button {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 12px 32px;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 32px 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Liability Insurance Application</h1>
+        <p class="subtitle">Complete the form below to apply for liability insurance coverage</p>
+
+        <form>
+            <!-- General Liability Insurance -->
+            <div class="insurance-type">
+                <h2>General Liability Insurance</h2>
+
+                <div class="form-group">
+                    <label for="gen-company">Company Name</label>
+                    <input type="text" id="gen-company" placeholder="Enter company name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="gen-reg">Company Registration Number</label>
+                        <input type="text" id="gen-reg" placeholder="Enter registration number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gen-contact">Contact Person Name</label>
+                        <input type="text" id="gen-contact" placeholder="Enter contact name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="gen-phone">Phone Number</label>
+                        <input type="tel" id="gen-phone" placeholder="Enter phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gen-email">Email Address</label>
+                        <input type="email" id="gen-email" placeholder="Enter email address">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="gen-business">Business Type</label>
+                        <select id="gen-business">
+                            <option value="">Select type</option>
+                            <option value="retail">Retail</option>
+                            <option value="services">Services</option>
+                            <option value="hospitality">Hospitality</option>
+                            <option value="construction">Construction</option>
+                            <option value="manufacturing">Manufacturing</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gen-activity">Business Activity</label>
+                        <input type="text" id="gen-activity" placeholder="Enter business activity">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="gen-employees">Number of Employees</label>
+                        <input type="number" id="gen-employees" placeholder="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gen-revenue">Annual Revenue</label>
+                        <input type="number" id="gen-revenue" placeholder="Enter annual revenue">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="gen-coverage">Coverage Amount Required</label>
+                        <input type="number" id="gen-coverage" placeholder="Enter coverage amount">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gen-location">Business Location</label>
+                        <input type="text" id="gen-location" placeholder="Enter business location">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="gen-license">Trade License (Image)</label>
+                    <input type="file" id="gen-license" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="gen-reg-img">Company Registration (Image)</label>
+                    <input type="file" id="gen-reg-img" accept="image/*">
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Product Liability Insurance -->
+            <div class="insurance-type">
+                <h2>Product Liability Insurance</h2>
+
+                <div class="form-group">
+                    <label for="prod-company">Company Name</label>
+                    <input type="text" id="prod-company" placeholder="Enter company name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="prod-reg">Company Registration Number</label>
+                        <input type="text" id="prod-reg" placeholder="Enter registration number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prod-contact">Contact Person Name</label>
+                        <input type="text" id="prod-contact" placeholder="Enter contact name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="prod-phone">Phone Number</label>
+                        <input type="tel" id="prod-phone" placeholder="Enter phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prod-email">Email Address</label>
+                        <input type="email" id="prod-email" placeholder="Enter email address">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="prod-list">Products List</label>
+                    <textarea id="prod-list" placeholder="List all products manufactured or sold..."></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="prod-sales">Annual Sales Volume</label>
+                        <input type="number" id="prod-sales" placeholder="Enter annual sales">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prod-channels">Distribution Channels</label>
+                        <input type="text" id="prod-channels" placeholder="e.g., Retail, Wholesale">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="prod-markets">Export Markets</label>
+                        <input type="text" id="prod-markets" placeholder="e.g., GCC, Europe">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prod-coverage">Coverage Amount Required</label>
+                        <input type="number" id="prod-coverage" placeholder="Enter coverage amount">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="prod-certificates">Product Certificates (Images)</label>
+                    <input type="file" id="prod-certificates" accept="image/*" multiple>
+                </div>
+
+                <div class="form-group">
+                    <label for="prod-license">Trade License (Image)</label>
+                    <input type="file" id="prod-license" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="prod-reg-img">Company Registration (Image)</label>
+                    <input type="file" id="prod-reg-img" accept="image/*">
+                </div>
+            </div>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>

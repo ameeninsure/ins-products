@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domestic Helper Insurance Application</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        .insurance-type {
+            background-color: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 24px;
+            margin-bottom: 32px;
+        }
+
+        .insurance-type h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 14px;
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            background-color: white;
+            transition: border-color 0.2s;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #333;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px dashed #d0d0d0;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        button {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 12px 32px;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 32px 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Domestic Helper Insurance Application</h1>
+        <p class="subtitle">Complete the form below to apply for domestic helper insurance coverage</p>
+
+        <form>
+            <!-- Comprehensive Insurance -->
+            <div class="insurance-type">
+                <h2>Domestic Worker Comprehensive Insurance</h2>
+
+                <div class="form-group">
+                    <label for="comp-employer">Employer Name</label>
+                    <input type="text" id="comp-employer" placeholder="Enter employer name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="comp-id">Employer ID Number</label>
+                        <input type="text" id="comp-id" placeholder="Enter ID number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comp-phone">Phone Number</label>
+                        <input type="tel" id="comp-phone" placeholder="Enter phone number">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="comp-email">Email Address</label>
+                    <input type="email" id="comp-email" placeholder="Enter email address">
+                </div>
+
+                <div class="form-group">
+                    <label for="comp-address">Home Address</label>
+                    <input type="text" id="comp-address" placeholder="Enter home address">
+                </div>
+
+                <div class="form-group">
+                    <label for="comp-worker">Worker Name</label>
+                    <input type="text" id="comp-worker" placeholder="Enter worker name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="comp-passport">Worker Passport Number</label>
+                        <input type="text" id="comp-passport" placeholder="Enter passport number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comp-nationality">Worker Nationality</label>
+                        <input type="text" id="comp-nationality" placeholder="Enter nationality">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="comp-dob">Worker Date of Birth</label>
+                        <input type="date" id="comp-dob">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comp-start">Contract Start Date</label>
+                        <input type="date" id="comp-start">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="comp-employer-id">Employer ID Copy (Image)</label>
+                    <input type="file" id="comp-employer-id" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="comp-worker-passport">Worker Passport Copy (Image)</label>
+                    <input type="file" id="comp-worker-passport" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="comp-photo">Worker Photo (Image)</label>
+                    <input type="file" id="comp-photo" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="comp-contract">Employment Contract (Image)</label>
+                    <input type="file" id="comp-contract" accept="image/*">
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Basic Insurance -->
+            <div class="insurance-type">
+                <h2>Domestic Worker Basic Insurance</h2>
+
+                <div class="form-group">
+                    <label for="basic-employer">Employer Name</label>
+                    <input type="text" id="basic-employer" placeholder="Enter employer name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="basic-id">Employer ID Number</label>
+                        <input type="text" id="basic-id" placeholder="Enter ID number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="basic-phone">Phone Number</label>
+                        <input type="tel" id="basic-phone" placeholder="Enter phone number">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="basic-address">Home Address</label>
+                    <input type="text" id="basic-address" placeholder="Enter home address">
+                </div>
+
+                <div class="form-group">
+                    <label for="basic-worker">Worker Name</label>
+                    <input type="text" id="basic-worker" placeholder="Enter worker name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="basic-passport">Worker Passport Number</label>
+                        <input type="text" id="basic-passport" placeholder="Enter passport number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="basic-nationality">Worker Nationality</label>
+                        <input type="text" id="basic-nationality" placeholder="Enter nationality">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="basic-dob">Worker Date of Birth</label>
+                        <input type="date" id="basic-dob">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="basic-start">Contract Start Date</label>
+                        <input type="date" id="basic-start">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="basic-employer-id">Employer ID Copy (Image)</label>
+                    <input type="file" id="basic-employer-id" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="basic-worker-passport">Worker Passport Copy (Image)</label>
+                    <input type="file" id="basic-worker-passport" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="basic-contract">Employment Contract (Image)</label>
+                    <input type="file" id="basic-contract" accept="image/*">
+                </div>
+            </div>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>

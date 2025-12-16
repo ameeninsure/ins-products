@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Insurance Application</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        .insurance-type {
+            background-color: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 24px;
+            margin-bottom: 32px;
+        }
+
+        .insurance-type h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 14px;
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            background-color: white;
+            transition: border-color 0.2s;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #333;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px dashed #d0d0d0;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        button {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 12px 32px;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 32px 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Motor Insurance Application</h1>
+        <p class="subtitle">Complete the form below to apply for motor insurance coverage</p>
+
+        <form>
+            <!-- Third Party Liability Insurance -->
+            <div class="insurance-type">
+                <h2>Third Party Liability Insurance</h2>
+
+                <div class="form-group">
+                    <label for="tpl-name">Customer Name</label>
+                    <input type="text" id="tpl-name" placeholder="Enter full name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="tpl-id">ID Number</label>
+                        <input type="text" id="tpl-id" placeholder="Enter ID number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tpl-license">License Number</label>
+                        <input type="text" id="tpl-license" placeholder="Enter license number">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="tpl-phone">Phone Number</label>
+                        <input type="tel" id="tpl-phone" placeholder="Enter phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tpl-plate">Plate Number</label>
+                        <input type="text" id="tpl-plate" placeholder="Enter plate number">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="tpl-plate-en">Plate Character (English)</label>
+                        <input type="text" id="tpl-plate-en" placeholder="Enter plate character">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tpl-plate-ar">Plate Character (Arabic)</label>
+                        <input type="text" id="tpl-plate-ar" placeholder="أدخل حرف اللوحة">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="tpl-license-img">Driving License (Image)</label>
+                    <input type="file" id="tpl-license-img" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="tpl-registration">Vehicle Registration (Image)</label>
+                    <input type="file" id="tpl-registration" accept="image/*">
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Comprehensive Insurance -->
+            <div class="insurance-type">
+                <h2>Comprehensive Insurance</h2>
+
+                <div class="form-group">
+                    <label for="comp-name">Customer Name</label>
+                    <input type="text" id="comp-name" placeholder="Enter full name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="comp-id">ID Number</label>
+                        <input type="text" id="comp-id" placeholder="Enter ID number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comp-license">License Number</label>
+                        <input type="text" id="comp-license" placeholder="Enter license number">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="comp-phone">Phone Number</label>
+                        <input type="tel" id="comp-phone" placeholder="Enter phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comp-plate">Plate Number</label>
+                        <input type="text" id="comp-plate" placeholder="Enter plate number">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="comp-plate-en">Plate Character (English)</label>
+                        <input type="text" id="comp-plate-en" placeholder="Enter plate character">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comp-plate-ar">Plate Character (Arabic)</label>
+                        <input type="text" id="comp-plate-ar" placeholder="أدخل حرف اللوحة">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="comp-make">Vehicle Make and Model</label>
+                        <input type="text" id="comp-make" placeholder="e.g., Toyota Camry">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comp-year">Vehicle Year</label>
+                        <input type="number" id="comp-year" placeholder="2024">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="comp-value">Vehicle Value</label>
+                    <input type="number" id="comp-value" placeholder="Enter vehicle value">
+                </div>
+
+                <div class="form-group">
+                    <label for="comp-license-img">Driving License (Image)</label>
+                    <input type="file" id="comp-license-img" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="comp-registration">Vehicle Registration (Image)</label>
+                    <input type="file" id="comp-registration" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="comp-photos">Vehicle Photos (Multiple)</label>
+                    <input type="file" id="comp-photos" accept="image/*" multiple>
+                </div>
+            </div>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>

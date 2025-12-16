@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Insurance Application</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        .insurance-type {
+            background-color: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 24px;
+            margin-bottom: 32px;
+        }
+
+        .insurance-type h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 14px;
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            background-color: white;
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #333;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px dashed #d0d0d0;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        button {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 12px 32px;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 32px 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Home Insurance Application</h1>
+        <p class="subtitle">Complete the form below to apply for home insurance coverage</p>
+
+        <form>
+            <!-- Building Insurance -->
+            <div class="insurance-type">
+                <h2>Building Insurance</h2>
+
+                <div class="form-group">
+                    <label for="building-owner">Owner Name</label>
+                    <input type="text" id="building-owner" placeholder="Enter owner name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="building-id">ID Number</label>
+                        <input type="text" id="building-id" placeholder="Enter ID number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="building-phone">Phone Number</label>
+                        <input type="tel" id="building-phone" placeholder="Enter phone number">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="building-email">Email Address</label>
+                    <input type="email" id="building-email" placeholder="Enter email address">
+                </div>
+
+                <div class="form-group">
+                    <label for="building-address">Property Address</label>
+                    <input type="text" id="building-address" placeholder="Enter property address">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="building-type">Building Type</label>
+                        <select id="building-type">
+                            <option value="">Select type</option>
+                            <option value="villa">Villa</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="townhouse">Townhouse</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="building-year">Construction Year</label>
+                        <input type="number" id="building-year" placeholder="2020">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="building-area">Building Area (sq meters)</label>
+                        <input type="number" id="building-area" placeholder="Enter area">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="building-floors">Number of Floors</label>
+                        <input type="number" id="building-floors" placeholder="1">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="building-value">Building Value</label>
+                    <input type="number" id="building-value" placeholder="Enter building value">
+                </div>
+
+                <div class="form-group">
+                    <label for="building-ownership">Property Ownership Document (Image)</label>
+                    <input type="file" id="building-ownership" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="building-photos">Property Photos (Multiple Images)</label>
+                    <input type="file" id="building-photos" accept="image/*" multiple>
+                </div>
+
+                <div class="form-group">
+                    <label for="building-id-img">ID Copy (Image)</label>
+                    <input type="file" id="building-id-img" accept="image/*">
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Contents Insurance -->
+            <div class="insurance-type">
+                <h2>Contents Insurance</h2>
+
+                <div class="form-group">
+                    <label for="contents-owner">Owner Name</label>
+                    <input type="text" id="contents-owner" placeholder="Enter owner name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contents-id">ID Number</label>
+                        <input type="text" id="contents-id" placeholder="Enter ID number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contents-phone">Phone Number</label>
+                        <input type="tel" id="contents-phone" placeholder="Enter phone number">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="contents-email">Email Address</label>
+                    <input type="email" id="contents-email" placeholder="Enter email address">
+                </div>
+
+                <div class="form-group">
+                    <label for="contents-address">Property Address</label>
+                    <input type="text" id="contents-address" placeholder="Enter property address">
+                </div>
+
+                <div class="form-group">
+                    <label for="contents-value">Contents Value Estimate</label>
+                    <input type="number" id="contents-value" placeholder="Enter estimated value">
+                </div>
+
+                <div class="form-group">
+                    <label for="contents-items">High-Value Items List</label>
+                    <textarea id="contents-items" placeholder="List any high-value items (jewelry, electronics, etc.)"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="contents-ownership">Property Ownership/Rental Agreement (Image)</label>
+                    <input type="file" id="contents-ownership" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="contents-photos">Contents Photos (Multiple Images)</label>
+                    <input type="file" id="contents-photos" accept="image/*" multiple>
+                </div>
+
+                <div class="form-group">
+                    <label for="contents-id-img">ID Copy (Image)</label>
+                    <input type="file" id="contents-id-img" accept="image/*">
+                </div>
+            </div>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>

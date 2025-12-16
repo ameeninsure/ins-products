@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workmen Compensation Insurance Application</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        .insurance-type {
+            background-color: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 24px;
+            margin-bottom: 32px;
+        }
+
+        .insurance-type h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 14px;
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            background-color: white;
+            transition: border-color 0.2s;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #333;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px dashed #d0d0d0;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        button {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 12px 32px;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 32px 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Workmen Compensation Insurance Application</h1>
+        <p class="subtitle">Complete the form below to apply for workmen compensation insurance</p>
+
+        <form>
+            <!-- Mandatory Workmen Compensation -->
+            <div class="insurance-type">
+                <h2>Mandatory Workmen Compensation</h2>
+
+                <div class="form-group">
+                    <label for="mand-company">Company Name</label>
+                    <input type="text" id="mand-company" placeholder="Enter company name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="mand-reg">Company Registration Number</label>
+                        <input type="text" id="mand-reg" placeholder="Enter registration number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mand-contact">Contact Person Name</label>
+                        <input type="text" id="mand-contact" placeholder="Enter contact name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="mand-phone">Phone Number</label>
+                        <input type="tel" id="mand-phone" placeholder="Enter phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mand-email">Email Address</label>
+                        <input type="email" id="mand-email" placeholder="Enter email address">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mand-workers">Number of Workers</label>
+                    <input type="number" id="mand-workers" placeholder="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="mand-list">Worker List with Salaries (Excel File)</label>
+                    <input type="file" id="mand-list" accept=".xlsx,.xls,.csv">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="mand-industry">Industry Type</label>
+                        <select id="mand-industry">
+                            <option value="">Select industry</option>
+                            <option value="construction">Construction</option>
+                            <option value="manufacturing">Manufacturing</option>
+                            <option value="services">Services</option>
+                            <option value="retail">Retail</option>
+                            <option value="hospitality">Hospitality</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mand-activity">Business Activity</label>
+                        <input type="text" id="mand-activity" placeholder="Enter business activity">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="mand-wages">Total Annual Wages</label>
+                    <input type="number" id="mand-wages" placeholder="Enter total annual wages">
+                </div>
+
+                <div class="form-group">
+                    <label for="mand-license">Trade License (Image)</label>
+                    <input type="file" id="mand-license" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="mand-reg-img">Company Registration (Image)</label>
+                    <input type="file" id="mand-reg-img" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="mand-labor">Employee Labor Cards (Images)</label>
+                    <input type="file" id="mand-labor" accept="image/*" multiple>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Extended Workmen Compensation -->
+            <div class="insurance-type">
+                <h2>Extended Workmen Compensation</h2>
+
+                <div class="form-group">
+                    <label for="ext-company">Company Name</label>
+                    <input type="text" id="ext-company" placeholder="Enter company name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ext-reg">Company Registration Number</label>
+                        <input type="text" id="ext-reg" placeholder="Enter registration number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ext-contact">Contact Person Name</label>
+                        <input type="text" id="ext-contact" placeholder="Enter contact name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ext-phone">Phone Number</label>
+                        <input type="tel" id="ext-phone" placeholder="Enter phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ext-email">Email Address</label>
+                        <input type="email" id="ext-email" placeholder="Enter email address">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="ext-workers">Number of Workers</label>
+                    <input type="number" id="ext-workers" placeholder="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="ext-list">Worker List with Salaries (Excel File)</label>
+                    <input type="file" id="ext-list" accept=".xlsx,.xls,.csv">
+                </div>
+
+                <div class="form-group">
+                    <label for="ext-extensions">Desired Coverage Extensions</label>
+                    <input type="text" id="ext-extensions" placeholder="e.g., Higher limits, Additional benefits">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ext-industry">Industry Type</label>
+                        <select id="ext-industry">
+                            <option value="">Select industry</option>
+                            <option value="construction">Construction</option>
+                            <option value="manufacturing">Manufacturing</option>
+                            <option value="services">Services</option>
+                            <option value="retail">Retail</option>
+                            <option value="hospitality">Hospitality</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ext-activity">Business Activity</label>
+                        <input type="text" id="ext-activity" placeholder="Enter business activity">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="ext-wages">Total Annual Wages</label>
+                    <input type="number" id="ext-wages" placeholder="Enter total annual wages">
+                </div>
+
+                <div class="form-group">
+                    <label for="ext-license">Trade License (Image)</label>
+                    <input type="file" id="ext-license" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="ext-reg-img">Company Registration (Image)</label>
+                    <input type="file" id="ext-reg-img" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="ext-labor">Employee Labor Cards (Images)</label>
+                    <input type="file" id="ext-labor" accept="image/*" multiple>
+                </div>
+
+                <div class="form-group">
+                    <label for="ext-safety">Safety Records (Image)</label>
+                    <input type="file" id="ext-safety" accept="image/*">
+                </div>
+            </div>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>

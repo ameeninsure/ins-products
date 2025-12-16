@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Insurance Application</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        .insurance-type {
+            background-color: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 24px;
+            margin-bottom: 32px;
+        }
+
+        .insurance-type h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 14px;
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            background-color: white;
+            transition: border-color 0.2s;
+        }
+
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #333;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px dashed #d0d0d0;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        button {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 12px 32px;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 32px 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cyber Insurance Application</h1>
+        <p class="subtitle">Complete the form below to apply for cyber security insurance coverage</p>
+
+        <form>
+            <!-- Cyber Liability Insurance -->
+            <div class="insurance-type">
+                <h2>Cyber Liability Insurance</h2>
+
+                <div class="form-group">
+                    <label for="cyber-company">Company Name</label>
+                    <input type="text" id="cyber-company" placeholder="Enter company name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cyber-reg">Registration Number</label>
+                        <input type="text" id="cyber-reg" placeholder="Enter registration number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cyber-contact">Contact Person Name</label>
+                        <input type="text" id="cyber-contact" placeholder="Enter contact name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cyber-phone">Phone Number</label>
+                        <input type="tel" id="cyber-phone" placeholder="Enter phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cyber-email">Email Address</label>
+                        <input type="email" id="cyber-email" placeholder="Enter email address">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cyber-industry">Industry Type</label>
+                        <select id="cyber-industry">
+                            <option value="">Select industry</option>
+                            <option value="finance">Finance & Banking</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="retail">Retail & E-commerce</option>
+                            <option value="technology">Technology</option>
+                            <option value="education">Education</option>
+                            <option value="government">Government</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cyber-employees">Number of Employees</label>
+                        <input type="number" id="cyber-employees" placeholder="0">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cyber-revenue">Annual Revenue</label>
+                        <input type="number" id="cyber-revenue" placeholder="Enter annual revenue">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cyber-coverage">Coverage Amount Required</label>
+                        <input type="number" id="cyber-coverage" placeholder="Enter coverage amount">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="cyber-description">IT Infrastructure Description</label>
+                    <textarea id="cyber-description" placeholder="Describe your IT systems, networks, servers, and digital assets"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="cyber-security">Security Measures in Place</label>
+                    <textarea id="cyber-security" placeholder="List your current security measures (firewalls, encryption, backups, etc.)"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="cyber-data">Types of Data Stored</label>
+                    <textarea id="cyber-data" placeholder="Describe what types of data you collect and store (customer info, payment data, health records, etc.)"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="cyber-license">Business License (Image)</label>
+                    <input type="file" id="cyber-license" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="cyber-network">IT Network Diagram (Image)</label>
+                    <input type="file" id="cyber-network" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="cyber-certs">Security Certifications (Images)</label>
+                    <input type="file" id="cyber-certs" accept="image/*" multiple>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Data Breach Insurance -->
+            <div class="insurance-type">
+                <h2>Data Breach Insurance</h2>
+
+                <div class="form-group">
+                    <label for="breach-company">Company Name</label>
+                    <input type="text" id="breach-company" placeholder="Enter company name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="breach-reg">Registration Number</label>
+                        <input type="text" id="breach-reg" placeholder="Enter registration number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="breach-contact">Contact Person Name</label>
+                        <input type="text" id="breach-contact" placeholder="Enter contact name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="breach-phone">Phone Number</label>
+                        <input type="tel" id="breach-phone" placeholder="Enter phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="breach-email">Email Address</label>
+                        <input type="email" id="breach-email" placeholder="Enter email address">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="breach-industry">Industry Type</label>
+                        <select id="breach-industry">
+                            <option value="">Select industry</option>
+                            <option value="finance">Finance & Banking</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="retail">Retail & E-commerce</option>
+                            <option value="technology">Technology</option>
+                            <option value="education">Education</option>
+                            <option value="government">Government</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="breach-customers">Number of Customers/Records</label>
+                        <input type="number" id="breach-customers" placeholder="0">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="breach-coverage">Coverage Amount Required</label>
+                        <input type="number" id="breach-coverage" placeholder="Enter coverage amount">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="breach-compliance">Data Protection Compliance</label>
+                        <select id="breach-compliance">
+                            <option value="">Select compliance</option>
+                            <option value="gdpr">GDPR</option>
+                            <option value="pci">PCI DSS</option>
+                            <option value="hipaa">HIPAA</option>
+                            <option value="iso">ISO 27001</option>
+                            <option value="other">Other</option>
+                            <option value="none">None</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="breach-storage">Data Storage Details</label>
+                    <textarea id="breach-storage" placeholder="Describe where and how customer data is stored (cloud, on-premise, databases)"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="breach-protection">Data Protection Measures</label>
+                    <textarea id="breach-protection" placeholder="List security measures for protecting customer data"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="breach-response">Incident Response Plan</label>
+                    <textarea id="breach-response" placeholder="Describe your data breach response plan (if any)"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="breach-license">Business License (Image)</label>
+                    <input type="file" id="breach-license" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="breach-compliance-cert">Compliance Certificates (Images)</label>
+                    <input type="file" id="breach-compliance-cert" accept="image/*" multiple>
+                </div>
+
+                <div class="form-group">
+                    <label for="breach-policy">Data Protection Policy (Image/PDF)</label>
+                    <input type="file" id="breach-policy" accept="image/*,.pdf">
+                </div>
+            </div>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>

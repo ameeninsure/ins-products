@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Insurance Application</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        .insurance-type {
+            background-color: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 24px;
+            margin-bottom: 32px;
+        }
+
+        .insurance-type h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 14px;
+            border: 1px solid #d0d0d0;
+            border-radius: 4px;
+            background-color: white;
+            transition: border-color 0.2s;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #333;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            border: 1px dashed #d0d0d0;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        button {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 12px 32px;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 32px 0;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Group Insurance Application</h1>
+        <p class="subtitle">Complete the form below to apply for group insurance coverage</p>
+
+        <form>
+            <!-- Group Health Insurance -->
+            <div class="insurance-type">
+                <h2>Group Health Insurance</h2>
+
+                <div class="form-group">
+                    <label for="health-company">Company Name</label>
+                    <input type="text" id="health-company" placeholder="Enter company name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="health-reg">Company Registration Number</label>
+                        <input type="text" id="health-reg" placeholder="Enter registration number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="health-contact">Contact Person Name</label>
+                        <input type="text" id="health-contact" placeholder="Enter contact name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="health-phone">Phone Number</label>
+                        <input type="tel" id="health-phone" placeholder="Enter phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="health-email">Email Address</label>
+                        <input type="email" id="health-email" placeholder="Enter email address">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="health-employees">Number of Employees</label>
+                        <input type="number" id="health-employees" placeholder="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="health-start">Coverage Start Date</label>
+                        <input type="date" id="health-start">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="health-list">Employee List with Details (Excel File)</label>
+                    <input type="file" id="health-list" accept=".xlsx,.xls,.csv">
+                </div>
+
+                <div class="form-group">
+                    <label for="health-ids">Employee ID Copies (Images)</label>
+                    <input type="file" id="health-ids" accept="image/*" multiple>
+                </div>
+
+                <div class="form-group">
+                    <label for="health-license">Trade License (Image)</label>
+                    <input type="file" id="health-license" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="health-reg-img">Company Registration (Image)</label>
+                    <input type="file" id="health-reg-img" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="health-auth">Authorization Letter (Image)</label>
+                    <input type="file" id="health-auth" accept="image/*">
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Group Life Insurance -->
+            <div class="insurance-type">
+                <h2>Group Life Insurance</h2>
+
+                <div class="form-group">
+                    <label for="life-company">Company Name</label>
+                    <input type="text" id="life-company" placeholder="Enter company name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="life-reg">Company Registration Number</label>
+                        <input type="text" id="life-reg" placeholder="Enter registration number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="life-contact">Contact Person Name</label>
+                        <input type="text" id="life-contact" placeholder="Enter contact name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="life-phone">Phone Number</label>
+                        <input type="tel" id="life-phone" placeholder="Enter phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="life-email">Email Address</label>
+                        <input type="email" id="life-email" placeholder="Enter email address">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="life-employees">Number of Employees</label>
+                        <input type="number" id="life-employees" placeholder="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="life-coverage">Coverage Amount Per Employee</label>
+                        <input type="number" id="life-coverage" placeholder="Enter coverage amount">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="life-start">Coverage Start Date</label>
+                    <input type="date" id="life-start">
+                </div>
+
+                <div class="form-group">
+                    <label for="life-list">Employee List with Details (Excel File)</label>
+                    <input type="file" id="life-list" accept=".xlsx,.xls,.csv">
+                </div>
+
+                <div class="form-group">
+                    <label for="life-ids">Employee ID Copies (Images)</label>
+                    <input type="file" id="life-ids" accept="image/*" multiple>
+                </div>
+
+                <div class="form-group">
+                    <label for="life-license">Trade License (Image)</label>
+                    <input type="file" id="life-license" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="life-reg-img">Company Registration (Image)</label>
+                    <input type="file" id="life-reg-img" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="life-auth">Authorization Letter (Image)</label>
+                    <input type="file" id="life-auth" accept="image/*">
+                </div>
+            </div>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</body>
+</html>
