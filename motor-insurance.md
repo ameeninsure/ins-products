@@ -16,6 +16,7 @@ Coverage for damages caused to others (people and property).
 - Plate Character (Arabic)
 - Driving License (Image)
 - Vehicle Registration (Image)
+- Vehicle First Registration Date
 
 ## Comprehensive Insurance
 
@@ -35,3 +36,5 @@ Full coverage including own vehicle damages, theft, and third-party liability.
 - Driving License (Image)
 - Vehicle Registration (Image)
 - Vehicle Photos (Multiple Images)
+- Vehicle First Registration Date
+- NCD Years
